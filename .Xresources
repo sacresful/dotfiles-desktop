@@ -22,7 +22,7 @@ URxvt.keysym.C-question:  resize-font:show
 URxvt*scrollBar: false
 
 ! special
-*.foreground:   #d0d0d0
+*.foreground:   #d0d0d1
 *.background:   #32333d
 *.cursorColor:  #d0d0d0
 

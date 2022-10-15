@@ -2,7 +2,7 @@
 Font: Hack
 
 
-remember:
-config add (file, after editing)
-config commit -m "comment"
-config push
+remember:</br>
+config add (file, after editing)</br>
+config commit -m "comment"</br>
+config push</br>

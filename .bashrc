@@ -112,4 +112,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
+EDITOR=vi
+alias rxvt='/usr/bin/urxvt'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'

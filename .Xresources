@@ -1,0 +1,60 @@
+! perl scripts
+URxvt.perl-lib: /home/sacresful/urxvt
+
+! extensions
+URxvt.perl-ext-common: default,tabbed,matcher,resize-font,-tabbed,clipboard
+
+! copy-paste
+URxvt.keysym.C-c:         perl:clipboard:copy
+URxvt.keysym.C-v:         perl:clipboard:paste
+URxvt.keysym.C-M-v:       perl:clipboard:paste_escaped
+URxvt.clipboard.copycmd:  xsel -ib
+URxvt.clipboard.pastecmd: xsel -ob
+
+! resize-font
+urxvt.font: xft:Hack:pixelsize=14
+URxvt.keysym.C-minus:     resize-font:smaller
+URxvt.keysym.C-plus:      resize-font:bigger
+URxvt.keysym.C-equal:     resize-font:reset
+URxvt.keysym.C-question:  resize-font:show
+
+! scrollbar
+URxvt*scrollBar: false
+
+! special
+*.foreground:   #d0d0d0
+*.background:   #32333d
+*.cursorColor:  #d0d0d0
+
+! black
+*.color0:       #151515
+*.color8:       #505050
+
+! red
+*.color1:       #ac4142
+*.color9:       #ac4142
+
+! green
+*.color2:       #90a959
+*.color10:      #90a959
+
+! yellow
+*.color3:       #f4bf75
+*.color11:      #f4bf75
+
+! blue
+*.color4:       #6a9fb5
+*.color12:      #6a9fb5
+
+! magenta
+*.color5:       #aa759f
+*.color13:      #aa759f
+
+! cyan
+*.color6:       #75b5aa
+*.color14:      #75b5aa
+
+! white
+*.color7:       #d0d0d0
+*.color15:      #f5f5f5
+

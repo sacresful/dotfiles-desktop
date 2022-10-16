@@ -188,8 +188,8 @@ screens = [
                 widget.Volume(
                     mouse_callbacks={"Button1": lazy.spawn(myTerminal + ' -e alsamixer')}
                     ),
-                widget.CurrentLayout(
-                    
+                widget.CurrentLayoutIcon(
+                    scale=0.75   
                     ),
             ],
             24,

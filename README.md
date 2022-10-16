@@ -30,3 +30,8 @@ pip install xcffib </br>
 pip install --no-cache-dir cairocffi</br>
 pip install qtile</br>
 10. /usr/share/xsessions add .qtile desktop</br>
+
+useful sites:</br>
+ps1generator(bashrc)
+
+

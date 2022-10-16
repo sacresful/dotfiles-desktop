@@ -115,5 +115,6 @@ fi
 EDITOR=vi
 alias rxvt='/usr/bin/urxvt'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+set -o vi
 
 export PS1="\[$(tput bold)\]\[\033[38;5;196m\][\[$(tput sgr0)\]\[\033[38;5;214m\]\u\[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;46m\]@\[$(tput sgr0)\]\[\033[38;5;33m\]\h\[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;196m\]]\[$(tput sgr0)\]\[\033[38;5;226m\]:\[$(tput sgr0)\]\[\033[38;5;81m\]\w\[$(tput sgr0)\]\[\033[38;5;201m\]\\$\[$(tput sgr0)\] \[$(tput sgr0)\]"

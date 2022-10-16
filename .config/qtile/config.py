@@ -31,6 +31,12 @@ from libqtile.utils import guess_terminal
 
 mod = "mod4"
 terminal = guess_terminal()
+myTerminal = guess_terminal()
+myBrowser = "firefox-esr"
+myTextEditor = myTerminal + "vi"
+myFileManager = myTerminal + "vifm"
+myRecorder = "obs"
+myimageviewer = "pqiv"
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -141,13 +147,36 @@ screens = [
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                 # widget.StatusNotifier(),
                 widget.Systray(),
-                widget.Net(),
-                widget.CPU(
-                    format="{freq_current}GHz {load_percent}%"
+                    widget.TextBox(
+                        text="|"
+                        ),
+                widget.Net(
+                    format="{up} {down}"
                     ),
-                widget.Memory(),
-                widget.Clock(format="%a, %d. %m. %Y. | %I:%M %p"),
-                widget.QuickExit(),
+                    widget.TextBox(
+                        text="|"
+                        ),
+                widget.CPU(
+                    format="{freq_current}GHz {load_percent}%",
+                    mouse_callbacks={"Button1": lazy.spawn(myTerminal + " -e htop")}
+                    ),
+                    widget.TextBox(
+                        text="|"
+                        ),
+                widget.Memory(
+                    format="{MemUsed:.0f}{mm} {MemTotal:.0f}{mm}",
+                    mouse_callbacks={"Button1": lazy.spawn(myTerminal + " -e htop")}
+                    ),
+                    widget.TextBox(
+                        text="|"
+                        ),
+                widget.Clock(format="%a, %d %m %Y | %I:%M %p"),
+                    widget.TextBox(
+                        text="|"
+                        ),
+                widget.Volume(
+                    mouse_callbacks={"Button1": lazy.spawn(myTerminal + ' -e alsamixer')}
+                    ),
             ],
             24,
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders

@@ -36,7 +36,7 @@ myBrowser = "firefox-esr"
 myTextEditor = myTerminal + "vi"
 myFileManager = myTerminal + "vifm"
 myRecorder = "obs"
-myimageviewer = "pqiv"
+myImageViewer = "pqiv"
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -135,7 +135,19 @@ screens = [
         top=bar.Bar(
             [
                 widget.CurrentLayout(),
-                widget.GroupBox(),
+                widget.GroupBox(
+                    rounded=False,
+                    highlight_method="block",
+                    borderwidth=3,
+                    disable_drag=True,
+                    highlight_color="#dfad27",
+                    inactive="000000",
+                    hide_unused=True,
+                    other_current_screen_border="000000",
+                    other_screen_border="000000",
+                    this_current_screen_border="#dfad27",
+                    this_screen_border="#dfad27"
+                    ),
                 widget.Prompt(),
                 widget.WindowName(),
                 widget.Chord(

@@ -141,14 +141,16 @@ screens = [
                     disable_drag=True,
                     highlight_color="#dfad27",
                     inactive="000000",
-                    hide_unused=True,
+                    hide_unused=False,
                     other_current_screen_border="000000",
                     other_screen_border="000000",
                     this_current_screen_border="#dfad27",
                     this_screen_border="#dfad27"
                     ),
                 widget.Prompt(),
-                widget.WindowName(),
+                widget.WindowName(
+                    background="dfad27",
+                    ),
                 widget.Chord(
                     chords_colors={
                         "launch": ("#ff0000", "#ffffff"),

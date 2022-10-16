@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Qtile
+Comment=Qtile Session
+Exec=/home/sacresful/.local/bin/qtile start
+Type=Application
+Keywords=wm;tiling
+

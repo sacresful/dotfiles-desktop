@@ -134,7 +134,6 @@ screens = [
         wallpaper_mode="fill",
         top=bar.Bar(
             [
-                widget.CurrentLayout(),
                 widget.GroupBox(
                     rounded=False,
                     highlight_method="block",
@@ -188,6 +187,9 @@ screens = [
                         ),
                 widget.Volume(
                     mouse_callbacks={"Button1": lazy.spawn(myTerminal + ' -e alsamixer')}
+                    ),
+                widget.CurrentLayout(
+                    
                     ),
             ],
             24,

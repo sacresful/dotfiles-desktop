@@ -199,6 +199,11 @@ screens = [
             # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
     ),
+ Screen(
+    wallpaper="~/.config/qtile/background2.png",
+    wallpaper_mode="fill",
+    )
+
 ]
 
 # Drag floating layouts.

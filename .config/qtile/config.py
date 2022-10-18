@@ -28,6 +28,30 @@ from libqtile import bar, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
+from libqtile.log_utils import logger
+from pytz import datetime
+
+class MouseOverClock(widget.Clock):
+    defaults = [
+        (
+            "US_Timezone",
+            "datetime.timezone.utc",
+            "Timezone to show when mouse is over widget."
+            )
+    ]
+
+    def __init__(self, **config):
+        widget.Clock.__init__(self, **config)
+        self.add_defaults(MouseOverClock.defaults)
+        self.eu_timezone = self.timezone
+
+    def mouse_enter(self, *args, **kwargs):
+        self.timezone = datetime.timezone.utc 
+        self.bar.draw()
+
+    def mouse_leave(self, *args, **kwargs):
+        self.timezone = self.eu_timezone
+        self.bar.draw()
 
 mod = "mod4"
 terminal = guess_terminal()
@@ -162,31 +186,34 @@ screens = [
                 widget.Systray(),
                     widget.TextBox(
                         text="|"
-                        ),
+                    ),
                 widget.Net(
                     format="{up} {down}"
                     ),
                     widget.TextBox(
                         text="|"
-                        ),
+                    ),
                 widget.CPU(
                     format="{freq_current}GHz {load_percent}%",
                     mouse_callbacks={"Button1": lazy.spawn(myTerminal + " -e htop")}
                     ),
                     widget.TextBox(
                         text="|"
-                        ),
+                    ),
                 widget.Memory(
                     format="{MemUsed:.0f}{mm} {MemTotal:.0f}{mm}",
                     mouse_callbacks={"Button1": lazy.spawn(myTerminal + " -e htop")}
                     ),
-                    widget.TextBox(
+                widget.TextBox(
                         text="|"
+                    ),
+                MouseOverClock(
+                        format="%a, %d %m %Y %I:%M %p %Z",
+                        timezone="Europe/Warsaw",
                         ),
-                widget.Clock(format="%a, %d %m %Y | %I:%M %p"),
-                    widget.TextBox(
-                        text="|"
-                        ),
+                widget.TextBox(
+                    text="|"
+                    ),
                 widget.Volume(
                     mouse_callbacks={"Button1": lazy.spawn(myTerminal + ' -e alsamixer')}
                     ),
@@ -205,6 +232,8 @@ screens = [
     )
 
 ]
+
+logger.debug("Callback function triggered")
 
 # Drag floating layouts.
 mouse = [

@@ -37,3 +37,4 @@ ps1generator(bashrc)
 
 to do:
 mouse_callbacks on time -> shows it in different timezone
+pip install pytz

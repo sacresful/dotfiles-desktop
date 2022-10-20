@@ -43,4 +43,6 @@ Keywords=wm,tiling</br>
 useful sites:</br>
 ps1generator(bashrc)
 
+try:
+switch to <a href=https://github.com/fairyglade/ly>LY display manager</a></br>
 

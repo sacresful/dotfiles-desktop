@@ -32,13 +32,13 @@ pip install qtile</br>
 pip install pytz</br>
 10. /usr/share/xsessions add .qtile desktop</br>
 
-.qtile desktop
-[Desktop Entry]
-Name=Qtile
-Comment=Qtile Destkop
-Exec=/home/sacresful/.local/bin/qtile start
-Type=Application
-Keywords=wm,tiling
+.qtile desktop</br>
+[Desktop Entry]</br>
+Name=Qtile</br>
+Comment=Qtile Destkop</br>
+Exec=/home/sacresful/.local/bin/qtile start</br>
+Type=Application</br>
+Keywords=wm,tiling</br>
 
 useful sites:</br>
 ps1generator(bashrc)

@@ -29,12 +29,18 @@ qtile installation</br>
 pip install xcffib </br>
 pip install --no-cache-dir cairocffi</br>
 pip install qtile</br>
+pip install pytz</br>
 10. /usr/share/xsessions add .qtile desktop</br>
+
+.qtile desktop
+[Desktop Entry]
+Name=Qtile
+Comment=Qtile Destkop
+Exec=/home/sacresful/.local/bin/qtile start
+Type=Application
+Keywords=wm,tiling
 
 useful sites:</br>
 ps1generator(bashrc)
 
 
-to do:
-mouse_callbacks on time -> shows it in different timezone
-pip install pytz

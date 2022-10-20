@@ -20,8 +20,6 @@ config push</br>
    apt install nvidia-driver firmware-misc-nonfree</br>
    sudo reboot</br>
 5. sudo apt install xserver-xorg-video-nvidia xserver-xorg-core xinit(try this first)</br>
-6. sudo apt install lightdm(for now)</br>
-   reboot</br>
 7. sudo apt install git</br>
 8. run install-apps.sh</br>
 9. sudo dpkg --add-architecture i386</br>
@@ -30,15 +28,6 @@ pip install xcffib </br>
 pip install --no-cache-dir cairocffi</br>
 pip install qtile</br>
 pip install pytz</br>
-10. /usr/share/xsessions add .qtile desktop</br>
-
-.qtile desktop</br>
-[Desktop Entry]</br>
-Name=Qtile</br>
-Comment=Qtile Destkop</br>
-Exec=/home/sacresful/.local/bin/qtile start</br>
-Type=Application</br>
-Keywords=wm,tiling</br>
 
 useful sites:</br>
 ps1generator(bashrc)</br>

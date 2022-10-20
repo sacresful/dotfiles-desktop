@@ -41,8 +41,8 @@ Type=Application</br>
 Keywords=wm,tiling</br>
 
 useful sites:</br>
-ps1generator(bashrc)
+ps1generator(bashrc)</br>
 
-try:
+try:</br>
 switch to <a href=https://github.com/fairyglade/ly>LY display manager</a></br>
 

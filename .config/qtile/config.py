@@ -201,7 +201,7 @@ screens = [
                         text="|"
                     ),
                 widget.Memory(
-                    format="{MemUsed:.0f}{mm} {MemTotal:.0f}{mm}",
+                    format="{MemUsed:.0f}{mm} {MemPercent:.0f} {MemTotal:.0f}{mm}",
                     mouse_callbacks={"Button1": lazy.spawn(myTerminal + " -e htop")}
                     ),
                 widget.TextBox(

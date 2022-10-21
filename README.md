@@ -32,6 +32,7 @@ pip install pytz</br>
 useful sites:</br>
 ps1generator(bashrc)</br>
 
-try:</br>
+try(maybe):</br>
 switch to <a href=https://github.com/fairyglade/ly>LY display manager</a></br>
+pqiv -> sxiv
 

@@ -11,6 +11,11 @@ URxvt.keysym.C-M-v:       perl:clipboard:paste_escaped
 URxvt.clipboard.copycmd:  xsel -ib
 URxvt.clipboard.pastecmd: xsel -ob
 
+! url-select
+URxvt.keysym.M-u:	  perl:url-select:select_next
+URxvt.url-select.launcher:	/usr/bin/firefox-esr
+URxvt.url-select.underline:	true
+
 ! resize-font
 urxvt.font: xft:Hack:pixelsize=18
 URxvt.keysym.C-minus:     resize-font:smaller

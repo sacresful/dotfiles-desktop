@@ -188,7 +188,8 @@ screens = [
                         text="|"
                     ),
                 widget.Net(
-                    format="{up} {down}"
+                    format="{up} {down}",
+                    mouse_callbacks={"Button1": lazy.spawn(myTerminal + " -e nmtui")}
                     ),
                     widget.TextBox(
                         text="|"

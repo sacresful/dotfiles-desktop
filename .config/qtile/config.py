@@ -209,9 +209,9 @@ screens = [
                         text="|"
                     ),
                 MouseOverClock(
-                        format="%a, %d %m %Y %I:%M %p %Z",
-                        timezone="Europe/Warsaw",
-                        ),
+                    format="%a, %d %m %Y %I:%M %p %Z",
+                    timezone="Europe/Warsaw",
+                    ),
                 widget.TextBox(
                     text="|"
                     ),
@@ -227,10 +227,15 @@ screens = [
             # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
     ),
- Screen(
-    wallpaper="~/.config/qtile/background2.png",
-    wallpaper_mode="fill",
-    )
+    Screen(
+        wallpaper="~/.config/qtile/background2.png",
+        wallpaper_mode="fill",
+      #  top=bar.Bar(
+      #      [
+      #      ],
+      #      24,
+      #  ),
+    ),
 
 ]
 

@@ -230,11 +230,18 @@ screens = [
     Screen(
         wallpaper="~/.config/qtile/background2.png",
         wallpaper_mode="fill",
-      #  top=bar.Bar(
-      #      [
-      #      ],
-      #      24,
-      #  ),
+        top=bar.Bar(
+            [
+                widget.Clock(
+                    format="%I:%M %p",
+                    ),
+                widget.TextBox(
+                    text="remapper",
+                    mouse_callbacks={"Button1": lazy.spawn(myTerminal + ' -e sudo input-remapper-gtk')},
+                    ),
+            ],
+            24,
+        ),
     ),
 
 ]
@@ -263,6 +270,8 @@ floating_layout = layout.Floating(
         Match(wm_class="ssh-askpass"),  # ssh-askpass
         Match(title="branchdialog"),  # gitk
         Match(title="pinentry"),  # GPG key password entry
+        Match(title="Steam"), # Steam
+        Match(title="Origin"), # Origin
     ]
 )
 auto_fullscreen = True

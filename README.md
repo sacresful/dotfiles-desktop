@@ -34,5 +34,6 @@ ps1generator(bashrc)</br>
 
 try(maybe):</br>
 switch to <a href=https://github.com/fairyglade/ly>LY display manager</a></br>
-pqiv -> sxiv
+pqiv -> sxiv</br>
+maybe vlc -> mpv</br>
 

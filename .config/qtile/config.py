@@ -188,27 +188,28 @@ screens = [
                     ),
                 widget.Net(
                     format="{up} {down}",
-                    mouse_callbacks={"Button1": lazy.spawn(myTerminal + " -e nmtui")}
+                    mouse_callbacks={"Button1": lazy.spawn(myTerminal + " -e nmtui")},
+                    update_interval=4,
                     ),
                     widget.TextBox(
                         text="|"
                     ),
                 widget.CPU(
-                    format="{freq_current}GHz {load_percent}%",
+                    format="{load_percent}%",
                     mouse_callbacks={"Button1": lazy.spawn(myTerminal + " -e htop")}
                     ),
                     widget.TextBox(
                         text="|"
                     ),
                 widget.Memory(
-                    format="{MemUsed:.0f}{mm} {MemPercent:.0f} {MemTotal:.0f}{mm}",
+                    format="{MemPercent:.0f}%",
                     mouse_callbacks={"Button1": lazy.spawn(myTerminal + " -e htop")}
                     ),
                 widget.TextBox(
                         text="|"
                     ),
                 MouseOverClock(
-                    format="%a, %d %m %Y %I:%M %p %Z",
+                        format="%I:%M %p %a, %d/%m/%Y",
                     timezone="Europe/Warsaw",
                     ),
                 widget.TextBox(

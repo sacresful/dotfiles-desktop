@@ -21,12 +21,11 @@ config push</br>
 5. sudo apt install xserver-xorg-video-nvidia xserver-xorg-core xinit(try this first)</br>
 7. sudo apt install git</br>
 8. run install-apps.sh</br>
-9. sudo dpkg --add-architecture i386</br>
-qtile installation</br>
-pip install xcffib </br>
-pip install --no-cache-dir cairocffi</br>
-pip install qtile</br>
-pip install pytz</br>
+9. qtile installation</br>
+   pip install xcffib </br>
+   pip install --no-cache-dir cairocffi</br>
+   pip install qtile</br>
+   pip install pytz</br>
 
 useful sites:</br>
 ps1generator(bashrc)</br>

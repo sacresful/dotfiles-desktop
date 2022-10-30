@@ -161,7 +161,7 @@ screens = [
                 widget.GroupBox(
                     rounded=False,
                     highlight_method="block",
-                    borderwidth=3,
+                    borderwidth=5,
                     disable_drag=True,
                     highlight_color="#dfad27",
                     inactive="000000",

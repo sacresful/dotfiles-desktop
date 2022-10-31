@@ -114,6 +114,7 @@ keys = [
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     Key([mod], "e", lazy.spawn(myTerminal + ' -e vifm'), desc="Open file explorer"),
+    Key([mod], "s", lazy.spawn(myTerminal + ' -e scrot -u'), desc="Screenshot"),
 ]
 
 groups = [Group(i) for i in "123456789"]

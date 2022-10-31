@@ -31,18 +31,30 @@ from libqtile.utils import guess_terminal
 from libqtile.log_utils import logger
 from pytz import datetime
 
-class MouseOverClock(widget.Clock):
+class ChangeTimezone(widget.Clock):
     defaults = [
         (
-            "US_Timezone",
+            "UTC",
             "datetime.timezone.utc",
-            "Timezone to show when mouse is over widget."
-            )
+            "Timezone to show when mouse is over widget.",
+        ),
+        (
+            "NZT",
+            "datetime.timezone.nzt",
+            "Timezone to show when clicked two times.",
+        ),
+        (
+            "CDT",
+            "datetime.timezone.cdt",
+            "Timezone to show when clicked three times.",
+        ),
     ]
+
+    # somehow find out how to make it dynamic, and change it through the list
 
     def __init__(self, **config):
         widget.Clock.__init__(self, **config)
-        self.add_defaults(MouseOverClock.defaults)
+        self.add_defaults(ChangeTimezone.defaults)
         self.eu_timezone = self.timezone
 
     def mouse_enter(self, *args, **kwargs):
@@ -164,7 +176,7 @@ screens = [
                     borderwidth=5,
                     disable_drag=True,
                     highlight_color="#dfad27",
-                    inactive="000000",
+                    inactive="#808080",
                     hide_unused=False,
                     other_current_screen_border="000000",
                     other_screen_border="000000",
@@ -205,19 +217,36 @@ screens = [
                     format="{MemPercent:.0f}%",
                     mouse_callbacks={"Button1": lazy.spawn(myTerminal + " -e htop")}
                     ),
-                widget.TextBox(
-                        text="|"
-                    ),
-                MouseOverClock(
+                    widget.TextBox(
+                            text="|"
+                        ),
+                widget.DF(
+                    visible_on_warn=False,
+                    format="({uf}{m}|{r:.0f}%)",
+                        ),
+                    widget.TextBox(
+                            text="|"
+                        ),
+                ChangeTimezone(
                         format="%I:%M %p %a, %d/%m/%Y",
                     timezone="Europe/Warsaw",
                     ),
-                widget.TextBox(
-                    text="|"
+                    widget.TextBox(
+                            text="|"
                     ),
                 widget.Volume(
                     mouse_callbacks={"Button1": lazy.spawn(myTerminal + ' -e alsamixer')}
                     ),
+                    widget.TextBox(
+                            text="|"
+                    ),
+                widget.CheckUpdates(
+                    distro="Debian",
+                    display_format="Updates: {updates}",
+                    ),
+                    widget.TextBox(
+                            text="|"
+                    ),                   
                 widget.CurrentLayoutIcon(
                     scale=0.75   
                     ),

@@ -229,8 +229,9 @@ screens = [
                             text="|"
                         ),
                 ChangeTimezone(
-                        format="%I:%M %p %a, %d/%m/%Y",
+                    format="%I:%M %p %a, %d/%m/%Y",
                     timezone="Europe/Warsaw",
+                    mouse_callbacks={"Button1": lazy.spawn(myTerminal + ' --hold -e cal -y')},
                     ),
                     widget.TextBox(
                             text="|"

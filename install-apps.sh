@@ -7,8 +7,10 @@ apt_install () {
 		sxiv \
 		firefox-esr \
 		obs-studio \
-		zip unzip \
-		alsa-utils pulseaudio \
+		zip \
+		unzip \
+		alsa-utils \
+		pulseaudio \
 		mpv \
 		htop \
 		python3-pip \

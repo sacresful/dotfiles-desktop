@@ -20,6 +20,7 @@ apt_install () {
 		xinput \
 		cmus \
 		ncal \
+		network-manager \
 	sudo apt-get update 
 	sudo dpkg --add-architecture i386
 	sudo apt-get update

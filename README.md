@@ -35,3 +35,12 @@ switch to <a href=https://github.com/fairyglade/ly>LY display manager</a></br>
 pqiv -> sxiv</br>
 maybe vlc -> mpv</br>
 
+/etc/X11/xorg.conf.d/50-mouse-acceleration.conf
+Section "InputClass"
+	Identifier "My Mouse"
+	Driver "libinput"
+	MatchIsPointer "yes"
+	Option "AccelProfile" "flat"
+	Option "AccelSpeed" "0"
+EndSection
+

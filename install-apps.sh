@@ -22,6 +22,7 @@ apt_install () {
 		ncal \
 		network-manager \
 		steam \
+		net-tools \
 	sudo apt-get update 
 	sudo dpkg --add-architecture i386
 	sudo apt-get update

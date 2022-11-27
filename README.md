@@ -31,16 +31,15 @@ useful sites:</br>
 ps1generator(bashrc)</br>
 
 try(maybe):</br>
-switch to <a href=https://github.com/fairyglade/ly>LY display manager</a></br>
 pqiv -> sxiv</br>
 maybe vlc -> mpv</br>
 
-/etc/X11/xorg.conf.d/50-mouse-acceleration.conf
-Section "InputClass"
-	Identifier "My Mouse"
-	Driver "libinput"
-	MatchIsPointer "yes"
-	Option "AccelProfile" "flat"
-	Option "AccelSpeed" "0"
-EndSection
+/etc/X11/xorg.conf.d/50-mouse-acceleration.conf</br>
+Section "InputClass"</br>
+	Identifier "My Mouse"</br>
+	Driver "libinput"</br>
+	MatchIsPointer "yes"</br>
+	Option "AccelProfile" "flat"</br>
+	Option "AccelSpeed" "0"</br>
+EndSection</br>
 

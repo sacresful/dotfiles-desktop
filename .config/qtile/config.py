@@ -117,8 +117,17 @@ keys = [
     Key([mod], "s", lazy.spawn(myTerminal + ' -e scrot -u'), desc="Screenshot"),
     Key([mod], "t", lazy.window.toggle_floating(), desc='Toggle floating'),
 ]
-
+#groups = [Group("1", matches=[Match(wm_class=["firefox"])]),
+#          Group("2"),
+#          Group("3"),
+#          Group("4"),
+#          Group("5"),
+#          Group("6"),
+#          Group("7"),
+#          Group("8"),
+#          Group("9")]
 groups = [Group(i) for i in "123456789"]
+
 
 for i in groups:
     keys.extend(

@@ -1,4 +1,3 @@
-#vimrc
 set nocompatible
 syntax on
 set encoding=utf-8

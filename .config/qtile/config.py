@@ -29,6 +29,7 @@ from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 from libqtile.log_utils import logger
+from libqtile.dgroups import simple_key_binder
 from pytz import datetime
 
 class ChangeTimezone(widget.Clock):
@@ -117,7 +118,7 @@ keys = [
     Key([mod], "s", lazy.spawn(myTerminal + ' -e scrot -u'), desc="Screenshot"),
     Key([mod], "t", lazy.window.toggle_floating(), desc='Toggle floating'),
 ]
-#groups = [Group("1", matches=[Match(wm_class=["firefox"])]),
+#groups = [Group("1"), matches=[Match(wm_class=["firefox"])]),
 #          Group("2"),
 #          Group("3"),
 #          Group("4"),
@@ -127,7 +128,6 @@ keys = [
 #          Group("8"),
 #          Group("9")]
 groups = [Group(i) for i in "123456789"]
-
 
 for i in groups:
     keys.extend(

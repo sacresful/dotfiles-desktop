@@ -31,6 +31,9 @@ from libqtile.utils import guess_terminal
 from libqtile.log_utils import logger
 from libqtile.dgroups import simple_key_binder
 from pytz import datetime
+from datetime import datetime
+
+###############################################################
 
 class ChangeTimezone(widget.Clock):
     defaults = [
@@ -57,14 +60,14 @@ class ChangeTimezone(widget.Clock):
         widget.Clock.__init__(self, **config)
         self.add_defaults(ChangeTimezone.defaults)
         self.eu_timezone = self.timezone
-
     def mouse_enter(self, *args, **kwargs):
-        self.timezone = datetime.timezone.utc 
+        self.timezone = datetime.timezone.utc
         self.bar.draw()
-
     def mouse_leave(self, *args, **kwargs):
         self.timezone = self.eu_timezone
         self.bar.draw()
+
+################################################################
 
 mod = "mod4"
 terminal = guess_terminal()
@@ -74,6 +77,8 @@ myTextEditor = myTerminal + "vi"
 myFileManager = myTerminal + "vifm"
 myRecorder = "obs"
 myImageViewer = "pqiv"
+
+# KEYBINDS
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -118,6 +123,9 @@ keys = [
     Key([mod], "s", lazy.spawn(myTerminal + ' -e scrot -u'), desc="Screenshot"),
     Key([mod], "t", lazy.window.toggle_floating(), desc='Toggle floating'),
 ]
+
+#WORKGROUPS
+
 #groups = [Group("1"), matches=[Match(wm_class=["firefox"])]),
 #          Group("2"),
 #          Group("3"),
@@ -169,6 +177,8 @@ widget_defaults = dict(
     padding=3,
 )
 extension_defaults = widget_defaults.copy()
+
+#TASKBAR
 
 screens = [
     Screen(
@@ -233,8 +243,13 @@ screens = [
                     widget.TextBox(
                             text="|"
                         ),
+                widget.Clock(
+                    format="%Z %I:%M %p %a,",
+                    timezone= "Europe/Warsaw",
+                    mouse_callbacks={"Button1": lazy.spawn(myTerminal + ' --hold -e ')},
+                    ),
                 ChangeTimezone(
-                    format="%I:%M %p %a, %d/%m/%Y",
+                    format="%d/%m/%Y",
                     timezone="Europe/Warsaw",
                     mouse_callbacks={"Button1": lazy.spawn(myTerminal + ' --hold -e cal -y')},
                     ),
@@ -282,7 +297,10 @@ screens = [
 
 ]
 
-logger.debug("Callback function triggered")
+
+#logger.debug("Callback function triggered")
+
+#OTHER
 
 # Drag floating layouts.
 mouse = [
@@ -330,3 +348,7 @@ wl_input_rules = None
 # We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
 # java that happens to be on java's whitelist.
 wmname = "LG3D"
+
+#TURN ON LOGGER
+logger.debug("Callback function triggered")
+

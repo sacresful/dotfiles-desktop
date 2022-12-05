@@ -35,40 +35,6 @@ from datetime import datetime
 
 ###############################################################
 
-class ChangeTimezone(widget.Clock):
-    defaults = [
-        (
-            "UTC",
-            "datetime.timezone.utc",
-            "Timezone to show when mouse is over widget.",
-        ),
-        (
-            "NZT",
-            "datetime.timezone.nzt",
-            "Timezone to show when clicked two times.",
-        ),
-        (
-            "CDT",
-            "datetime.timezone.cdt",
-            "Timezone to show when clicked three times.",
-        ),
-    ]
-
-    # somehow find out how to make it dynamic, and change it through the list
-
-    def __init__(self, **config):
-        widget.Clock.__init__(self, **config)
-        self.add_defaults(ChangeTimezone.defaults)
-        self.eu_timezone = self.timezone
-    def mouse_enter(self, *args, **kwargs):
-        self.timezone = datetime.timezone.utc
-        self.bar.draw()
-    def mouse_leave(self, *args, **kwargs):
-        self.timezone = self.eu_timezone
-        self.bar.draw()
-
-################################################################
-
 mod = "mod4"
 terminal = guess_terminal()
 myTerminal = guess_terminal()
@@ -246,7 +212,7 @@ screens = [
                 widget.Clock(
                     format="%Z %I:%M %p %a,",
                     timezone= "Europe/Warsaw",
-                    mouse_callbacks={"Button1": lazy.spawn(myTerminal + ' --hold -e ')},
+                    mouse_callbacks={"Button1": lazy.spawn(myTerminal + ' --hold -e python3 timezones.py')},
                     ),
                 ChangeTimezone(
                     format="%d/%m/%Y",

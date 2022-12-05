@@ -23,6 +23,7 @@ apt_install () {
 		network-manager \
 		steam \
 		net-tools \
+		ufw \
 	sudo apt-get update 
 	sudo dpkg --add-architecture i386
 	sudo apt-get update

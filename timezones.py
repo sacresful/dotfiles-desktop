@@ -2,20 +2,14 @@ import pytz
 from pytz import timezone
 from datetime import datetime
 
-format = "%Z %I:%M %p %a, %d/%m/%Y"
+def main():
+    format = "%Z %I:%M %p %a, %d/%m/%Y"
+    timezones = ["CET", "UTC", "Pacific/Auckland", "US/Pacific","US/Central", "US/Eastern"]
+    for zone in timezones:
+        time = datetime.now(timezone(zone)).strftime(format)
+        if zone == "Pacific/Auckland":
+            print(f"{time} - PoE")
+        print(f"{time}")
 
-time = datetime.now
-
-CET = time(timezone("CET")).strftime(format) 
-UTC = time(timezone("UTC")).strftime(format) 
-PT = time(timezone("Pacific/Auckland")).strftime(format)
-PST = time(timezone("US/Pacific")).strftime(format)
-CST = time(timezone("US/Central")).strftime(format)
-EST = time(timezone("US/Eastern")).strftime(format)
-
-print("\n", CET, "\n",
-            UTC, "\n",
-            PT, "PoE", "\n", 
-            PST, "\n",
-            CST, "Lobos", "\n", 
-            EST, "\n",)
+if __name__ == "__main__":
+    main()

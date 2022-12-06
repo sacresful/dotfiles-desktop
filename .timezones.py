@@ -24,7 +24,6 @@ def main():
             pytz_zones()
             break
         else:
-            pass
             break
         
 def pytz_zones():

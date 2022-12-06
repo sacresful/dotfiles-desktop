@@ -212,7 +212,7 @@ screens = [
                 widget.Clock(
                     format="%I:%M %p %a,",
                     timezone= "Europe/Warsaw",
-                    mouse_callbacks={"Button1": lazy.spawn(myTerminal + ' --hold -e python3 timezones.py')},
+                    mouse_callbacks={"Button1": lazy.spawn(myTerminal + ' --hold -e python3 .timezones.py')},
                     ),
                 widget.Clock(
                     format="%d/%m/%Y",

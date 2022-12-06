@@ -17,11 +17,15 @@ def main():
 
     while True:
         question = input("Do you want to print out all timezones? ")
-        if question == "yes" or "y": 
+        if question == "yes":
+            pytz_zones()
+            break
+        elif question == "y":
             pytz_zones()
             break
         else:
             pass
+            break
         
 def pytz_zones():
     for timezone in pytz.all_timezones:

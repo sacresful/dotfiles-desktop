@@ -7,8 +7,6 @@ def main():
     timezones = ["CET", "UTC", "Pacific/Auckland", "US/Pacific","US/Central", "US/Eastern"]
     for zone in timezones:
         time = datetime.now(timezone(zone)).strftime(format)
-        if zone == "Pacific/Auckland":
-            print(f"{time} - PoE")
         print(f"{time}")
 
 if __name__ == "__main__":

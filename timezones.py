@@ -4,10 +4,28 @@ from datetime import datetime
 
 def main():
     format = "%Z %I:%M %p %a, %d/%m/%Y"
-    timezones = ["CET", "UTC", "Pacific/Auckland", "US/Pacific","US/Central", "US/Eastern"]
-    for zone in timezones:
+    zones = ["CET",
+             "UTC",
+             "Pacific/Auckland",
+             "US/Pacific", 
+             "US/Central",
+             "US/Eastern",
+            ]
+    for zone in zones:
         time = datetime.now(timezone(zone)).strftime(format)
         print(f"{time}")
+
+    while True:
+        question = input("Do you want to print out all timezones? ")
+        if question == "yes" or "y": 
+            pytz_zones()
+            break
+        else:
+            pass
+        
+def pytz_zones():
+    for timezone in pytz.all_timezones:
+        print(timezone)
 
 if __name__ == "__main__":
     main()

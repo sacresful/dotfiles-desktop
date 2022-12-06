@@ -31,5 +31,10 @@ apt_install () {
 	sudo apt-get upgrade steam -f
 	sudo apt install nvidia-driver-libs:i386
 	sudo apt-get update
+	sudo apt install gnupg2 software-properties-common apt-transport-https curl
+	curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+	sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+	sudo apt-get update
+	sudo apt install code
 }
 apt_install

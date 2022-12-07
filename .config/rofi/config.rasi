@@ -2,7 +2,7 @@ configuration {
  display-drun: "Applications:";
  display-window: "Windows";
  drun-display-format: "{icon} {name}";
- font: "Hack";
+ font: "Hack Medium 12";
  modi: "window,run,drun";
  show-icons: true;
 }

@@ -84,7 +84,7 @@ keys = [
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
-    Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+    Key([mod], "r", lazy.spawn(myTerminal + ' -e rofi -show window'), desc="Run application launcher"),
     Key([mod], "e", lazy.spawn(myTerminal + ' -e vifm'), desc="Open file explorer"),
     Key([mod], "s", lazy.spawn(myTerminal + ' -e scrot -u'), desc="Screenshot"),
     Key([mod], "t", lazy.window.toggle_floating(), desc='Toggle floating'),
@@ -165,7 +165,6 @@ screens = [
                     this_current_screen_border="#dfad27",
                     this_screen_border="#dfad27"
                     ),
-                widget.Prompt(),
                 widget.WindowName(
                     background="dfad27",
                     ),

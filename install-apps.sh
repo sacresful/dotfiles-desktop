@@ -24,6 +24,7 @@ apt_install () {
 		steam \
 		net-tools \
 		ufw \
+		rofi \
 	sudo apt-get update 
 	sudo dpkg --add-architecture i386
 	sudo apt-get update

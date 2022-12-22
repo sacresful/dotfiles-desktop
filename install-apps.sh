@@ -1,30 +1,32 @@
 #!/bin/bash
 apt_install () {
 	sudo apt-get install \
+		#basic
 		neofetch \
+		zip \
+		unzip \
 		vifm \
 		rxvt-unicode \
 		sxiv \
 		firefox-esr \
-		obs-studio \
-		zip \
-		unzip \
 		alsa-utils \
 		pulseaudio \
-		mpv \
 		htop \
-		python3-pip \
-		libpangocairo-1.0-0 \
-		ffmpeg x264 x265 
 		fonts-noto \
 		xinput \
-		cmus \
-		ncal \
 		network-manager \
-		steam \
 		net-tools \
 		ufw \
 		rofi \
+		#utility
+		obs-studio \
+		mpv \
+		python3-pip \
+		libpangocairo-1.0-0 \
+		ffmpeg x264 x265 
+		cmus \
+		ncal \
+		steam \
 	sudo apt-get update 
 	sudo dpkg --add-architecture i386
 	sudo apt-get update

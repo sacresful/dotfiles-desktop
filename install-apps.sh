@@ -23,7 +23,9 @@ apt_install () {
 		mpv \
 		python3-pip \
 		libpangocairo-1.0-0 \
-		ffmpeg x264 x265 
+		ffmpeg \
+		x264 \
+		x265 \
 		cmus \
 		ncal \
 		steam \

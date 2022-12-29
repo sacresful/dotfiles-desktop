@@ -19,6 +19,7 @@ sudo apt-get install \
 	net-tools \
 	ufw \
 	rofi \
+	wget \
 #utility
 	obs-studio \
 	mpv \

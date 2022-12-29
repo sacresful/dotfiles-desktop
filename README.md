@@ -1,9 +1,10 @@
 # dotfiles
 Font: <a href=https://github.com/source-foundry/Hack/releases/download/v3.003/Hack-v3.003-ttf.zip> Hack</a></br>
-imageviewer: pqiv</br>
+imageviewer: sxiv</br>
 filemanager: vifm</br>
 texteditor: vim</br>
 terminal: urxvt</br>
+media player: mpv </br>
 
 
 remember:</br>
@@ -29,10 +30,6 @@ config push</br>
 
 useful sites:</br>
 ps1generator(bashrc)</br>
-
-try(maybe):</br>
-pqiv -> sxiv</br>
-maybe vlc -> mpv</br>
 
 /etc/X11/xorg.conf.d/50-mouse-acceleration.conf</br>
 Section "InputClass"</br>

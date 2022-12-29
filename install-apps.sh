@@ -36,8 +36,4 @@ sudo apt-get update
 sudo apt install libgl1-mesa-dri:i386 libgl1:i386
 sudo apt install nvidia-driver-libs:i386
 sudo apt-get update
-sudo apt install gnupg2 software-properties-common apt-transport-https curl
-curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-sudo apt-get update
-sudo apt install code
+wget https://az764295.vo.msecnd.net/stable/e8a3071ea4344d9d48ef8a4df2c097372b0c5161/code_1.74.2-1671533413_amd64.deb

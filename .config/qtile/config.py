@@ -230,6 +230,7 @@ screens = [
                 widget.CheckUpdates(
                     distro="Debian",
                     display_format="Updates: {updates}",
+                    no_update_string="No updates",
                     ),
                     widget.TextBox(
                             text="|"

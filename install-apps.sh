@@ -40,3 +40,4 @@ sudo apt install nvidia-driver-libs:i386
 sudo apt-get update
 wget https://az764295.vo.msecnd.net/stable/e8a3071ea4344d9d48ef8a4df2c097372b0c5161/code_1.74.2-1671533413_amd64.deb
 sudo apt install ./code_1.74.2-1671533413_amd64.deb
+sudo mv 50-mouseacceleration.conf /etc/X11/xorg.conf.d

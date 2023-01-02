@@ -28,13 +28,3 @@ config push</br>
 
 useful sites:</br>
 ps1generator(bashrc)</br>
-
-/etc/X11/xorg.conf.d/50-mouse-acceleration.conf</br>
-Section "InputClass"</br>
-	Identifier "My Mouse"</br>
-	Driver "libinput"</br>
-	MatchIsPointer "yes"</br>
-	Option "AccelProfile" "flat"</br>
-	Option "AccelSpeed" "0"</br>
-EndSection</br>
-

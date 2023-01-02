@@ -1,39 +1,39 @@
 #!/bin/bash
+install="sudo apt install"
 sudo dpkg --add-architecture i386
 sudo apt install libc6-i386
 sudo apt-get update
-sudo apt-get install \
 #basic
-	neofetch \
-	zip \
-	unzip \
-	vifm \
-	rxvt-unicode \
-	sxiv \
-	firefox-esr \
-	alsa-utils \
-	pulseaudio \
-	htop \
-	fonts-noto \
-	xinput \
-	network-manager \
-	net-tools \
-	ufw \
-	rofi \
-	wget \
+$install neofetch 
+$install zip 
+$install unzip 
+$install vifm 
+$install rxvt-unicode 
+$install sxiv 
+$install firefox-esr 
+$install alsa-utils 
+$install pulseaudio 
+$install htop 
+$install fonts-noto 
+$install xinput 
+$install network-manager 
+$install net-tools 
+$install ufw 
+$install rofi 
+$install wget 
 #utility
-	obs-studio \
-	mpv \
-	python3-pip \
-	libpangocairo-1.0-0 \
-	ffmpeg \
-	x264 \
-	x265 \
-	cmus \
-	ncal \
-	steam \
-	gnome-keyring \
-	pass \
+$install obs-studio 
+$install mpv 
+$install python3-pip 
+$install libpangocairo-1.0-0 
+$install ffmpeg 
+$install x264
+$install x265 
+$install cmus 
+$install ncal 
+$install steam 
+$install gnome-keyring 
+$install pass 
 sudo apt-get update 
 sudo apt install libgl1-mesa-dri:i386 libgl1:i386
 sudo apt install nvidia-driver-libs:i386

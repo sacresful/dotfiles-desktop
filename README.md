@@ -24,6 +24,7 @@ config push</br>
    pip install --no-cache-dir cairocffi</br>
    pip install qtile</br>
    pip install pytz</br>
+   pip install dbus-next</br>
 
 useful sites:</br>
 ps1generator(bashrc)</br>

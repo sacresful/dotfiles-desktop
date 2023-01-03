@@ -37,6 +37,7 @@ $install pass
 $install texlive-full
 $install ntfs-3g
 $install dunst
+$install libnotify-bin
 sudo apt-get update 
 sudo apt install libgl1-mesa-dri:i386 libgl1:i386
 sudo apt install nvidia-driver-libs:i386

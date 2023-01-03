@@ -118,6 +118,7 @@ alias config='/usr/bin/git --git-dir=$HOME/dotfiles-desktop/ --work-tree=$HOME'
 alias upgrades='apt list --upgradeable'
 alias dc='discord'
 alias ff='firefox-esr'
+alias log="cat ~/.local/share/qtile/qtile.log"
 
 
 export PS1="\[$(tput bold)\]\[\033[38;5;196m\][\[$(tput sgr0)\]\[\033[38;5;214m\]\u\[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;46m\]@\[$(tput sgr0)\]\[\033[38;5;33m\]\h\[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;196m\]]\[$(tput sgr0)\]\[\033[38;5;226m\]:\[$(tput sgr0)\]\[\033[38;5;81m\]\w\[$(tput sgr0)\]\[\033[38;5;201m\]\\$\[$(tput sgr0)\] \[$(tput sgr0)\]"

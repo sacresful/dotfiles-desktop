@@ -175,7 +175,8 @@ screens = [
                     name_transform=lambda name: name.upper(),
                 ),
                 # widget.StatusNotifier(),
-                widget.Cmus(),
+                widget.Cmus(
+                ),
                 widget.Systray(),
                     widget.TextBox(
                         text="|"
@@ -235,7 +236,7 @@ screens = [
                     ),
                     widget.TextBox(
                             text="|"
-                    ),                   
+                    ),
                 widget.CurrentLayoutIcon(
                     scale=0.75   
                     ),

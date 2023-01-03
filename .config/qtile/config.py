@@ -36,6 +36,7 @@ from datetime import datetime
 ###############################################################
 
 mod = "mod4"
+terminal = "urxvt"
 myTerminal = "urxvt"
 myBrowser = "firefox-esr"
 myTextEditor = myTerminal + "vi"

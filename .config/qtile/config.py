@@ -108,7 +108,11 @@ layouts = [
     # layout.MonadWide(),
     # layout.RatioTile(),
     layout.Tile(border_focus=["#dfad27"], border_width=1),
-    layout.TreeTab(border_focus=["#dfad27"], border_width=1),
+    layout.TreeTab(
+        border_focus=["#dfad27"], border_width=1,
+        bg_color="32333d",
+        active_bg="#dfad27",
+    ),
     # layout.VerticalTile(),
     # layout.Zoomy(),
 ]

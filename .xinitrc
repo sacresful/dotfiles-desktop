@@ -3,5 +3,6 @@ gnome-keyring-daemon --start --components=secrets
 xrdb -merge ~/.Xresources
 xbindkeys &
 setxkbmap pl
-exec qtile start
+exec dbus-launch qtile start
+dbus-run-session qtile start
 dunst -print

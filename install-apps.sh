@@ -42,6 +42,7 @@ $install apt-transport-https
 $install seahorse
 $install speedtest-cli
 $install lm-sensors
+$install libx11-dev
 sudo apt-get update 
 sudo apt install libgl1-mesa-dri:i386 libgl1:i386
 sudo apt install nvidia-driver-libs:i386

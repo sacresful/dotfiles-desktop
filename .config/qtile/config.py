@@ -176,6 +176,9 @@ screens = [
                     widget.TextBox(
                         text="|"
                     ),
+                widget.ThermalSensor(
+                tag_sensor="Core 0"
+                ),
                 widget.Memory(
                     format="{MemPercent:.0f}%",
                     mouse_callbacks={"Button1": lazy.spawn(myTerminal + " -e htop")}
